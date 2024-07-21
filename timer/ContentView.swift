@@ -35,7 +35,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.6)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color.black.opacity(1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
@@ -67,11 +67,11 @@ struct ContentView: View {
                     VStack {
                         Text("\(Int(timeLeft))")
                             .font(.system(size: 72, weight: .bold, design: .rounded))
-                            .foregroundColor(.white)
+                            .foregroundStyle(.white)
 
                         Text("Seconds Left")
                             .font(.title2)
-                            .foregroundColor(.white)
+                            .foregroundStyle(.white)
                             .opacity(0.8)
                     }
                 }
@@ -82,7 +82,7 @@ struct ContentView: View {
                 HStack(spacing: 40.0) {
                     Image(systemName: timerStarted ? "stop.circle.fill" : "play.circle.fill")
                         .font(.system(size: 60))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .scaleEffect(buttonScale)
                         .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
                         .onTapGesture {
@@ -99,7 +99,7 @@ struct ContentView: View {
 
                     Image(systemName: "arrow.counterclockwise.circle.fill")
                         .font(.system(size: 60))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .scaleEffect(resetButtonScale)
                         .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
                         .onTapGesture {
